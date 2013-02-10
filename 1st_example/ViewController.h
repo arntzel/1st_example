@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UILabel *label;
+- (IBAction)button:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *button2;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) NSMutableArray *tasks;
 @end
